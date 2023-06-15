@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Username</a>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>URL Shortener</h1>
+        <form action="/shorten" method="POST">
+            <input type="text" name="url" placeholder="Enter your URL" required>
+            <button type="submit">Shorten</button>
+        </form>
+    </div>
+</body>
+</html>
+
